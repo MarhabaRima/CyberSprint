@@ -1,0 +1,54 @@
+.module-section {
+    padding: 4rem 1rem;
+    background-color: #0F0F1A;
+    color: white;
+    text-align: center;
+  }
+  
+  .module-wrapper {
+    max-width: 96rem;
+    margin: 0 auto;
+  }
+  
+  .module-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+  
+  .module-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .module-card {
+    background-color: #1A1A2C;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .module-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(124, 58, 237, 0.3);
+  }
+  
+  .module-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .module-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .module-desc {
+    font-size: 0.95rem;
+    color: #ccc;
+  }

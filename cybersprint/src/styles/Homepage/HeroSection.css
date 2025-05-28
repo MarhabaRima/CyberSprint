@@ -10,19 +10,16 @@
   overflow: hidden;
 }
 
-.hero-section::before {
-  content: '';
+.hero-section::after {
+  content: "";
   position: absolute;
-  top: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.15), transparent);
-  z-index: 0;
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #0c0c1c, transparent 20%, transparent 80%, #0c0c1c);
+  z-index: 1; /* Above video, below text */
   pointer-events: none;
-  animation: pulseGlow 6s ease-in-out infinite;
 }
 
 /* Hero content */
