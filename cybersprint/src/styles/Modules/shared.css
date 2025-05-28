@@ -1,1 +1,65 @@
-/* shared module styling */
+/* shared.css — base layout for all module pages */
+.module-page {
+    background-color: #0F0F1A;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 2rem;
+    line-height: 1.7;
+  }
+  
+  .module-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .module-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .module-subtitle {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-top: 0.5rem;
+  }
+  
+  .module-section {
+    margin-bottom: 3rem;
+  }
+  
+  .section-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #a855f7;
+    margin-bottom: 1rem;
+  }
+  
+  .section-points {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .point-bullet {
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+  }
+  
+  .module-activity {
+    background: #1A1A2C;
+    border-left: 4px solid #a855f7;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+  }
+  /* Add to shared.css */
+.module-section {
+    background: #1e1e2f;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+  .module-section:hover {
+    transform: translateY(-5px);
+  }
