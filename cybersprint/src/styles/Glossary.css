@@ -99,34 +99,98 @@
     border-radius: 9999px;
   }
   
-  .category-core {
-    background-color: #7c3aed;
-    color: white;
-    font-size: 0.75rem;
-    padding: 0.35rem 0.75rem;
-    border-radius: 9999px;
-  }
-  
-  .category-attack {
-    background-color: #dc2626;
-    color: white;
-    font-size: 0.75rem;
-    padding: 0.35rem 0.75rem;
-    border-radius: 9999px;
-  }
-  
-  .category-vulnerability {
-    background-color: #2563eb;
-    color: white;
-    font-size: 0.75rem;
-    padding: 0.35rem 0.75rem;
-    border-radius: 9999px;
-  }
-  
-  .category-default {
-    background-color: #444;
-    color: white;
-    font-size: 0.75rem;
-    padding: 0.35rem 0.75rem;
-    border-radius: 9999px;
-  }
+  /* ... existing styles remain unchanged ... */
+
+/* === Additional Category Colors === */
+.category-core {
+  background-color: #7c3aed;
+  color: white;
+}
+
+.category-attack {
+  background-color: #dc2626;
+  color: white;
+}
+
+.category-vulnerability {
+  background-color: #2563eb;
+  color: white;
+}
+
+.category-strategy {
+  background-color: #00897b;
+  color: white;
+}
+
+.category-tool {
+  background-color: #38bdf8;
+  color: #0a0a0a;
+}
+
+.category-best {
+  background-color: #16a34a;
+  color: white;
+}
+
+.category-component {
+  background-color: #9333ea;
+  color: white;
+}
+
+.category-policy {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.category-mechanism {
+  background-color: #1e88e5;
+  color: white;
+}
+
+.category-operational {
+  background-color: #6b21a8;
+  color: white;
+}
+
+.category-api {
+  background-color: #0284c7;
+  color: white;
+}
+
+.category-monitoring {
+  background-color: #0e7490;
+  color: white;
+}
+
+.category-test {
+  background-color: #facc15;
+  color: #111;
+}
+
+.category-format {
+  background-color: #c026d3;
+  color: white;
+}
+
+.category-comm {
+  background-color: #7c2d12;
+  color: white;
+}
+
+.category-protocol {
+  background-color: #06b6d4;
+  color: black;
+}
+
+.category-default {
+  background-color: #444;
+  color: white;
+}
+
+/* Common styling for all category pills */
+[class^="category-"], [class*=" category-"] {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
