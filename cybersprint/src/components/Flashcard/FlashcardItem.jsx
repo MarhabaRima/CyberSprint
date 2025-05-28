@@ -1,6 +1,6 @@
 //Flip card component for flashcards
 import { useState } from "react";
-import "../styles/FlashcardItem.css"; 
+import "../../styles/Flashcard/FlashcardItem.css";
 
 export default function FlashcardItem({ term, definition }) {
   const [flipped, setFlipped] = useState(false);

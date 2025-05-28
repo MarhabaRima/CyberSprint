@@ -1,5 +1,3 @@
-// src/components/GlossaryCard.jsx
-
 export default function GlossaryCard({ term, definition, tags, category }) {
   return (
     <div className="glossary-card">
