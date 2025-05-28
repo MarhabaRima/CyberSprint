@@ -1,24 +1,23 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import '../styles/Navbar.css'; // Optional for hover styling
 
 export default function Navbar() {
-  const location = useLocation();
-
-  const isActive = (path) =>
-    location.pathname === path ? 'text-purple-500' : 'text-white';
-
   return (
-    <nav className="bg-[#1A1A2C] px-6 py-4 flex justify-between items-center shadow-md">
-      <Link to="/" className="text-xl font-bold text-purple-400">
-        CyberSprint
-      </Link>
-      <div className="space-x-4 text-sm sm:text-base">
-        <Link to="/" className={isActive('/')}>
-          Home
+    <header className="navbar">
+      <div className="navbar-container">
+        {/* Logo / Brand */}
+        <Link to="/" className="navbar-logo">
+          CyberSprint
         </Link>
-        <Link to="/dashboard" className={isActive('/dashboard')}>
-          Dashboard
-        </Link>
+
+        {/* Navigation Links */}
+        <nav className="navbar-links">
+          <Link to="/" className="nav-item">Home</Link>
+          <Link to="/dashboard" className="nav-item">Dashboard</Link>
+          <Link to="/modules" className="nav-item">Modules</Link>
+          <Link to="/quizzes" className="nav-item">Quizzes</Link>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }

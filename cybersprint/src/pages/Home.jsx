@@ -1,15 +1,28 @@
-// src/pages/Home.jsx
-import '../styles/Home.css';
-import HeroSection from '../components/HeroSection';
-import FeatureHighlights from '../components/FeatureHighlights';
-import Footer from '../components/Footer';
+import { useState } from "react";
+import HeroSection from "../components/HeroSection";
+import FeatureHighlights from "../components/FeatureHighlights";
+import Glossary from "../components/Glossary";
 
 export default function Home() {
+  const [showGlossary, setShowGlossary] = useState(false);
+
+  const toggleGlossary = () => {
+    setShowGlossary(prev => !prev);
+    setTimeout(() => {
+      document.getElementById("glossary-section")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
+
   return (
-    <main className="homepage bg-[#0F0F1A] text-white min-h-screen">
+    <div>
       <HeroSection />
-      <FeatureHighlights />
-      <Footer />
-    </main>
+      <FeatureHighlights onGlossaryClick={toggleGlossary} />
+
+      {showGlossary && (
+        <div id="glossary-section" className="pt-24">
+          <Glossary />
+        </div>
+      )}
+    </div>
   );
 }

@@ -1,38 +1,43 @@
-// src/components/FeatureHighlights.jsx
 import '../styles/FeatureHighlights.css';
 
 const features = [
   {
-    title: 'Progress Tracking',
-    description: 'Real-time feedback on topics, quizzes, and flashcards.',
-    icon: '📊',
+    title: "Track Progress",
+    description: "Visualize your journey across flashcards, quizzes, and modules.",
+    icon: "📈",
   },
   {
-    title: 'Interactive Quizzes',
-    description: 'Test yourself with quick and fun assessments.',
-    icon: '🧠',
+    title: "Instant Quizzes",
+    description: "Test your understanding on the go — with no pressure.",
+    icon: "⚡",
   },
   {
-    title: 'Cyber Glossary',
-    description: 'Look up key security concepts instantly.',
-    icon: '📚',
+    title: "Cyber Glossary",
+    description: "Look up key security terms, instantly and clearly.",
+    icon: "📚",
+    isClickable: true, 
   },
 ];
 
-export default function FeatureHighlights() {
+export default function FeatureHighlights({ onGlossaryClick }) {
   return (
-    <section className="features py-12 px-6 bg-[#1A1A2C]">
-      <h2 className="text-3xl font-bold text-center mb-10 text-white">
-        Why Choose CyberSprint?
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {features.map((feature, index) => (
-          <div key={index} className="feature-card bg-[#2A2A40] p-6 rounded-xl text-center hover:bg-purple-600 transition">
-            <div className="text-4xl mb-4">{feature.icon}</div>
-            <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-            <p className="text-sm text-gray-300">{feature.description}</p>
-          </div>
-        ))}
+    <section className="feature-section">
+      <div className="feature-wrapper">
+        <h2 className="feature-heading">Why Choose CyberSprint?</h2>
+
+        <div className="feature-grid">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className={`feature-card ${feature.isClickable ? 'cursor-pointer' : ''}`}
+              onClick={feature.isClickable ? onGlossaryClick : undefined}
+            >
+              <div className="feature-icon">{feature.icon}</div>
+              <h3 className="feature-title">{feature.title}</h3>
+              <p className="feature-desc">{feature.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

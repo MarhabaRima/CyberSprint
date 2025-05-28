@@ -1,3 +1,52 @@
-.hero {
-    background: radial-gradient(circle at top left, #1a1a2c, #0f0f1a);
+/* Minimal dark background with subtle fade */
+.hero-section {
+  background: radial-gradient(circle at 30% 30%, #1A1A2C, #0F0F1A);
+}
+
+/* Optional subtle background animation or glow (Blending Spoons uses animated SVGs) */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15), transparent);
+  z-index: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+/* Soft pulse animation for modern glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateX(-50%) scale(1);
   }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-50%) scale(1.05);
+  }
+}
+
+/* src/styles/HeroSection.css */
+
+.start-button-blend {
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  background: white;
+  color: #0F0F1A;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.start-button-blend:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px rgba(124, 58, 237, 0.2);
+}
