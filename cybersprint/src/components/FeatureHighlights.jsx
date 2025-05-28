@@ -15,11 +15,27 @@ const features = [
     title: "Cyber Glossary",
     description: "Look up key security terms, instantly and clearly.",
     icon: "📚",
-    isClickable: true, 
+    isClickable: true,
+    type: "glossary",
+  },
+  {
+    title: "Flashcards",
+    description: "Master terms by flipping interactive flashcards.",
+    icon: "🃏",
+    isClickable: true,
+    type: "flashcards",
   },
 ];
 
-export default function FeatureHighlights({ onGlossaryClick }) {
+export default function FeatureHighlights({ onGlossaryClick, onFlashcardClick }) {
+  const handleClick = (type) => {
+    if (type === "glossary") {
+      onGlossaryClick();
+    } else if (type === "flashcards") {
+      onFlashcardClick();
+    }
+  };
+
   return (
     <section className="feature-section">
       <div className="feature-wrapper">
@@ -30,7 +46,7 @@ export default function FeatureHighlights({ onGlossaryClick }) {
             <div
               key={index}
               className={`feature-card ${feature.isClickable ? 'cursor-pointer' : ''}`}
-              onClick={feature.isClickable ? onGlossaryClick : undefined}
+              onClick={feature.isClickable ? () => handleClick(feature.type) : undefined}
             >
               <div className="feature-icon">{feature.icon}</div>
               <h3 className="feature-title">{feature.title}</h3>
