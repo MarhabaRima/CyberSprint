@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../styles/Navbar.css'; // Optional for hover styling
+import '../../styles/Navbar-Footer/Navbar.css';
 
 export default function Navbar() {
   return (

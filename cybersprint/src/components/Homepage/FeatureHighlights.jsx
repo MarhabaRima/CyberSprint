@@ -1,4 +1,4 @@
-import '../styles/FeatureHighlights.css';
+import '../../styles/Homepage/FeatureHighlights.css';
 
 const features = [
   {
@@ -27,12 +27,12 @@ const features = [
   },
 ];
 
-export default function FeatureHighlights({ onGlossaryClick, onFlashcardClick }) {
+export default function FeatureHighlights({ onGlossaryClick, onFlashcardsClick }) {
   const handleClick = (type) => {
     if (type === "glossary") {
       onGlossaryClick();
     } else if (type === "flashcards") {
-      onFlashcardClick();
+      onFlashcardsClick();
     }
   };
 

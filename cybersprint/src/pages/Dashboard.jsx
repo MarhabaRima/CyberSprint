@@ -1,11 +1,9 @@
-import ProgressBar from '../components/ProgressBar';
 import ActivityCard from '../components/ActivityCard';
 import RadarChart from '../components/RadarChart';
 import NextModuleCard from '../components/NextModuleCard';
 import StudyStreak from '../components/StudyStreak';
-import Footer from '../components/Footer';
-
-import '../styles/Dashboard.css';
+import Footer from "../components/Navbar-Footer/Footer";
+import '../styles/Homepage/Dashboard.css';
 
 export default function Dashboard() {
   const dashboardData = {

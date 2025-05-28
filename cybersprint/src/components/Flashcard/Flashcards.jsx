@@ -1,7 +1,7 @@
 import { useState } from "react";
-import flashcardData from "../data/flashcardsData";
+import flashcardData from "../../data/flashcardsData";
 import FlashcardItem from "./FlashcardItem";
-import "../styles/Flashcards.css";
+import "../../styles/Flashcard/Flashcards.css";
 
 export default function Flashcards() {
   const [index, setIndex] = useState(0);

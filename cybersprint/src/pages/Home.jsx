@@ -1,27 +1,27 @@
 import { useState } from "react";
-import HeroSection from "../components/HeroSection";
-import FeatureHighlights from "../components/FeatureHighlights";
-import Glossary from "../components/Glossary";
-import Flashcards from "../components/Flashcards";
-import Footer from "../components/Footer"; // ✅ Add this line
+import HeroSection from "../components/Homepage/HeroSection";
+import FeatureHighlights from "../components/Homepage/FeatureHighlights";
+import Glossary from "../components/Glossary/Glossary";
+import Flashcards from "../components/Flashcard/Flashcards";
+import Footer from "../components/Navbar-Footer/Footer";
 
 export default function Home() {
   const [showGlossary, setShowGlossary] = useState(false);
   const [showFlashcards, setShowFlashcards] = useState(false);
 
-  // Toggle Cyber Glossary section
+  // Toggle functions for glossary and flashcards
+  // These functions handle the visibility of the glossary and flashcards sections
   const toggleGlossary = () => {
     setShowGlossary(prev => !prev);
-    setShowFlashcards(false); // close flashcards
+    setShowFlashcards(false);
     setTimeout(() => {
       document.getElementById("glossary-section")?.scrollIntoView({ behavior: "smooth" });
     }, 100);
   };
 
-  // Toggle Flashcards section
   const toggleFlashcards = () => {
     setShowFlashcards(prev => !prev);
-    setShowGlossary(false); // close glossary
+    setShowGlossary(false);
     setTimeout(() => {
       document.getElementById("flashcard-section")?.scrollIntoView({ behavior: "smooth" });
     }, 100);
@@ -30,10 +30,10 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      
+
       <FeatureHighlights
         onGlossaryClick={toggleGlossary}
-        onFlashcardClick={toggleFlashcards}
+        onFlashcardsClick={toggleFlashcards}
       />
 
       {showGlossary && (
@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       )}
 
-      <Footer /> 
+      <Footer />
     </div>
   );
 }
