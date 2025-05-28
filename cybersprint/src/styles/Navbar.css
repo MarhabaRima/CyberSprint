@@ -1,0 +1,40 @@
+.navbar {
+  background-color: transparent;
+  padding: 1.25rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar-container {
+  max-width: 96rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-item {
+  color: #ccc;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+  color: #a855f7;
+}

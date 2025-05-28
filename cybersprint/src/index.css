@@ -1,29 +1,45 @@
-/* Tailwind layers */
+/* index.css */
+
+/* Import Tailwind’s core styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Global Theme & Typography */
+/* ================================
+   🔧 Global Styles
+   This section applies base styling to match
+   the CyberSprint brand identity.
+   ================================= */
+
+/* :root variables help define baseline UI theme */
 :root {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: dark;
-  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Poppins', sans-serif;
   background-color: #0F0F1A;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: rgba(255, 255, 255, 0.95);
+  scroll-behavior: smooth;
 }
 
-/* Optional: Set body and layout defaults */
+/* Body: reset margin/padding and enforce background */
 body {
   margin: 0;
+  padding: 0;
   background-color: #0F0F1A;
+  color: rgba(255, 255, 255, 0.95);
 }
 
-/* Optional utility: smooth transitions */
+/* Global transition for smoother UI changes */
 * {
   transition: all 0.2s ease-in-out;
+}
+
+/* Scrollbar: subtle for dark mode (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4b4b6b;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1A1A2C;
 }

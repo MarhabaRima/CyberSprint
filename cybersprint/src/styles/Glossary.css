@@ -1,0 +1,132 @@
+/* src/styles/Glossary.css */
+
+.glossary {
+    background-color: #0f0f1a;
+    padding: 4rem 1.5rem;
+    color: white;
+  }
+  
+  .glossary-wrapper {
+    max-width: 96rem;
+    margin: 0 auto;
+  }
+  
+  .glossary-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /* A–Z navigation */
+  .glossary-letters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .glossary-letter {
+    background: #1a1a2c;
+    color: #aaa;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .glossary-letter:hover {
+    background-color: #2a2a3c;
+  }
+  
+  .glossary-letter.active {
+    background-color: #7c3aed;
+    color: white;
+  }
+  
+  /* Cards */
+  .glossary-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Card layout */
+  .glossary-card {
+    background-color: #1a1a2c;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    max-width: 100%;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    word-break: break-word;
+    transition: all 0.3s ease;
+  }
+  
+  .glossary-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  
+  .glossary-term {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .glossary-definition {
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  .glossary-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .glossary-tag {
+    background-color: #2d2d3a;
+    color: #bbb;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+  }
+  
+  .category-core {
+    background-color: #7c3aed;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+  }
+  
+  .category-attack {
+    background-color: #dc2626;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+  }
+  
+  .category-vulnerability {
+    background-color: #2563eb;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+  }
+  
+  .category-default {
+    background-color: #444;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+  }

@@ -1,4 +1,81 @@
-.feature-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.2);
+/* src/styles/FeatureHighlights.css */
+
+.feature-section {
+  background-color: #0F0F1A;
+  padding: 6rem 1.5rem;
+  color: white;
+  overflow-x: hidden;
+}
+
+.feature-wrapper {
+  max-width: 96rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.feature-heading {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 4rem;
+}
+
+/* Responsive Grid Layout */
+.feature-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (min-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Feature Card Style */
+.feature-card {
+  background-color: #1A1A2C;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.feature-card:hover {
+  background-color: #232336;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.2);
+}
+
+/* Icon with soft glow */
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Title styling with transition on hover */
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Optional hover color on title */
+.feature-card:hover .feature-title {
+  color: #a855f7;
+}
+
+.feature-desc {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+}

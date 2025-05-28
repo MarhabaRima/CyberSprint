@@ -1,9 +1,13 @@
-import '../styles/Footer.css';
-
 export default function Footer() {
   return (
-    <footer className="footer text-center py-6 bg-[#0F0F1A] border-t border-gray-800 text-gray-500 text-sm">
-      © {new Date().getFullYear()} CyberSprint. All rights reserved.
-    </footer>
+<footer className="footer">
+  <div className="footer-container">
+    <p className="footer-text">© {new Date().getFullYear()} CyberSprint</p>
+    <div className="footer-links">
+      <a href="/privacy" className="footer-link">Privacy</a>
+      <a href="/terms" className="footer-link">Terms</a>
+    </div>
+  </div>
+</footer>
   );
 }
