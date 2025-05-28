@@ -1,6 +1,5 @@
 import ActivityCard from '../components/ActivityCard';
 import RadarChart from '../components/RadarChart';
-import NextModuleCard from '../components/NextModuleCard';
 import StudyStreak from '../components/StudyStreak';
 import Footer from "../components/Navbar-Footer/Footer";
 import '../styles/Homepage/Dashboard.css';
@@ -38,7 +37,7 @@ export default function Dashboard() {
           </div>
         </section>
 
-        {/* Grid: Left = Activity + Progress | Right = Radar + Next Module */}
+        {/* Grid: Left = Activity + Progress | Right = Radar + Study Streak */}
         <div className="dashboard-grid lg:dashboard-grid-2fr-1fr">
           {/* LEFT COLUMN */}
           <section>
@@ -52,7 +51,6 @@ export default function Dashboard() {
             <div className="mb-6">
               <RadarChart />
             </div>
-            <NextModuleCard />
             <div className="mt-6">
               <StudyStreak />
             </div>

@@ -1,0 +1,1 @@
+// renders content using layout
