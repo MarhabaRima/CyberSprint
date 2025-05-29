@@ -1,41 +1,27 @@
-/* CyberIntro.css — extra styles for this specific topic */
-
-.module-header .module-subtitle {
-    font-style: italic;
-    color: #aaa;
+/* Style for Cybersecurity Intro Specific Sections */
+.module-page .map-section {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    background-color: #151525;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
   }
   
-  .module-section:nth-child(even) {
-    background-color: #1A1A2C;
-    padding: 1rem;
-    border-radius: 0.5rem;
-  }
-  
-  .module-activity a {
-    color: #7C3AED;
-    text-decoration: underline;
-  }
-  
-  .module-activity a:hover {
-    opacity: 0.8;
-  }
-
-  .clickable {
+  .module-page .clickable {
     cursor: pointer;
     user-select: none;
+    color: #7c3aed;
     transition: color 0.3s ease;
   }
   
-  .clickable:hover {
+  .module-page .clickable:hover {
     color: #a855f7;
   }
   
-  .map-section {
-    margin: 2.5rem 0;
-    text-align: center;
-  }
-  
-  .live-map {
+  /* Embedded Live Map */
+  .module-page .live-map {
     width: 100%;
     height: 70vh;
     border: none;
@@ -44,13 +30,31 @@
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   }
   
-  .map-caption {
+  .module-page .map-caption {
     font-size: 0.95rem;
     color: #ccc;
     margin-top: 0.5rem;
   }
   
-  .map-link {
+  .module-page .map-link {
     font-size: 0.9rem;
     margin-top: 1rem;
+  }
+  
+  /* Quick Activity Section */
+  .module-page .module-activity {
+    background-color: #121221;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    margin-top: 3rem;
+  }
+  
+  .module-page .module-activity a {
+    color: #7c3aed;
+    text-decoration: underline;
+  }
+  
+  .module-page .module-activity a:hover {
+    opacity: 0.8;
   }

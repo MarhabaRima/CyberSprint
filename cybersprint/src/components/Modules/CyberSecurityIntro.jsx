@@ -10,44 +10,45 @@ export default function CyberSecurityIntro() {
   return (
     <div className="module-page">
       {/* Hero Section */}
-      <div className="module-header">
+      <header className="module-header">
         <h1 className="module-title">🔐 Introduction to Cybersecurity</h1>
         <p className="module-subtitle">Protecting the digital world, one byte at a time.</p>
-      </div>
+      </header>
 
-      {/* Dynamic Content Sections */}
+      {/* Content Sections */}
       {CyberIntroContent.sections.map((section, index) => {
         const isAttackSection = section.heading.toLowerCase().includes('cyber attacks');
+
         return (
           <div key={index}>
-            <section className="module-section">
+            <section className={`module-section fade-in ${index % 2 === 0 ? 'light-bg' : 'dark-bg'}`}>
               <h2 className="section-heading">{section.heading}</h2>
               <ul className="section-points">
                 {section.content.map((point, idx) => (
-                  <li key={idx} className="point-bullet">{point}</li>
+                  <li key={idx} className="point-bullet">💡 {point}</li>
                 ))}
               </ul>
             </section>
 
-            {/* Collapsible Map Section After Specific Content */}
+            {/* Map Toggle */}
             {isAttackSection && (
               <div className="map-section">
-                <h2 className="section-heading clickable" onClick={() => setShowMap(prev => !prev)}>
+                <h2 className="section-heading clickable" onClick={() => setShowMap(!showMap)}>
                   🌍 Live Cyber Attack Map {showMap ? '▲' : '▼'}
                 </h2>
 
                 {showMap && (
-                  <>
+                  <div className="map-container">
                     <iframe
                       title="Digital Attack Map"
                       src="https://www.digitalattackmap.com/#anim=1&color=0&country=ALL&list=0&time=18763&view=map"
                       className="live-map"
                       allowFullScreen
-                    ></iframe>
+                    />
                     <p className="map-caption">
                       Real-time global cyber attacks — keep an eye on the digital battlefield.
                     </p>
-                  </>
+                  </div>
                 )}
 
                 <p className="map-link">
@@ -60,7 +61,7 @@ export default function CyberSecurityIntro() {
       })}
 
       {/* Quick Activity */}
-      <div className="module-activity">
+      <section className="module-activity">
         <h2 className="section-heading">💡 Quick Activity</h2>
         <p>
           Visit the{' '}
@@ -78,7 +79,7 @@ export default function CyberSecurityIntro() {
           <li>🎯 What was their motive?</li>
           <li>🔓 What vulnerability was exploited?</li>
         </ul>
-      </div>
+      </section>
 
       <Footer />
     </div>

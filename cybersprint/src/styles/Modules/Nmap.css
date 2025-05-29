@@ -1,0 +1,86 @@
+/* Nmap.css — styles for Nmap topic */
+
+.module-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .module-title {
+    font-size: 2.2rem;
+    color: #40bfc1;
+  }
+  
+  .module-subtitle {
+    color: #aaa;
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .module-section {
+    background-color: #101624;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.05);
+  }
+  
+  .section-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #7ee0ff;
+  }
+  
+  .section-points {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .point-bullet {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+    position: relative;
+    color: #e0f7fa;
+  }
+  
+  .point-bullet::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    color: #40bfc1;
+  }
+  
+  .terminal-block {
+    background-color: #000;
+    color: #00ff88;
+    font-family: monospace;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    white-space: pre-wrap;
+  }
+  
+  .code-sim-wrapper {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .btn-run {
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    background-color: #40bfc1;
+    color: #000;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 1rem;
+  }
+  
+  .btn-run:hover {
+    background-color: #2ea9a9;
+  }
+  
+  .real-terminal {
+    margin-top: 1rem;
+  }

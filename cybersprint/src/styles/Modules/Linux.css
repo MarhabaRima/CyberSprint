@@ -1,0 +1,122 @@
+/* Linux.css */
+
+.module-page {
+    padding-bottom: 2rem;
+  }
+  
+  /* Subtitle under main heading */
+  .module-header .module-subtitle {
+    font-style: italic;
+    color: #c2c2c2;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Alternating sections */
+  .module-section:nth-child(even) {
+    background-color: #1f1f2f;
+    padding: 1.75rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Section Headings */
+  .section-heading {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  /* Bullet points */
+  .section-points {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #dddddd;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  
+  .point-bullet {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Terminal command block */
+  .terminal-block {
+    background-color: #12121d;
+    color: #a6f4c5; /* Soft mint green */
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #2a2a3a;
+    box-shadow: 0 2px 10px rgba(16, 185, 129, 0.1);
+  }
+  
+  /* Code simulator wrapper */
+  .code-sim-wrapper {
+    margin-top: 1.5rem;
+    text-align: left;
+  }
+  
+  /* Run Terminal Button */
+  .btn-run {
+    margin-top: 1rem;
+    background-color: #10b981; /* Tailwind's emerald-500 */
+    color: white;
+    font-weight: bold;
+    padding: 0.55rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  }
+  
+  .btn-run:hover {
+    background-color: #059669;
+  }
+  
+  /* Terminal Emulator Styling */
+  .terminal-sim {
+    background-color: #111827; /* dark navy */
+    color: #16f596;            /* fun green text */
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+  }
+  
+  .terminal-sim .output {
+    color: #f9fafb;
+    margin-left: 1rem;
+  }
+  
+  /* Animation */
+  .fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Avoid overriding navbar or global links */
+  nav,
+  .navbar,
+  .footer,
+  a {
+    all: unset;
+    display: revert;
+    color: revert;
+  }
