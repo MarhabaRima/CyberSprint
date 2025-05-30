@@ -1,104 +1,93 @@
-// CyberIntroContent.jsx
-
 const CyberIntroContent = {
   title: "Introduction to Cybersecurity",
   sections: [
     {
-      heading: "🌐 What is Cybersecurity?",
+      heading: "What is Cybersecurity?",
       content: [
-        "Cybersecurity is the art and science of protecting systems, networks, and data from digital attacks.",
-        "It's like being the digital guardian of everything you own online — from social media to banking apps.",
-        "Cybersecurity isn't just technical—it's personal. It protects your privacy, money, and reputation.",
+        "Cybersecurity is like the locks and alarms protecting your digital house.",
+        "It defends computers, networks, and data from unauthorized access or attacks.",
+        "Cyber threats are rising — protecting your digital life is more important than ever.",
+        "Cybersecurity is a growing industry (e.g., worth \u00a38.9 billion in the UK)."
       ]
     },
     {
-      heading: "🎯 Goals of Cybersecurity",
+      heading: "Careers in Cybersecurity",
       content: [
-        "✨ Ensure **Confidentiality**: Keep information away from prying eyes.",
-        "🔧 Maintain **Integrity**: Make sure information remains unaltered.",
-        "📡 Guarantee **Availability**: Make services and data available when needed.",
-        "💬 These 3 pillars make up the legendary **CIA Triad**."
+        "Security Analyst \ud83d\udd0d",
+        "Penetration Tester \ud83d\udca3",
+        "SOC Analyst \ud83e\udd2d",
+        "Malware Analyst \ud83d\udc1b",
+        "Security Architect \ud83c\udfd7\ufe0f"
       ]
     },
     {
-      heading: "Cyber Attacks and Threats", // 👈 This is important!
+      heading: "The CIA Triad",
       content: [
-        "Cyberattacks aim to break the CIA Triad through malware, phishing, DDoS, and other techniques.",
-        "Threat actors include script kiddies, cybercriminals, hacktivists, insiders, and state-sponsored entities.",
-        "These attacks can lead to identity theft, financial loss, or national security breaches.",
+        "Confidentiality: Keep data private \u2014 e.g., encrypted bank login.",
+        "Integrity: Ensure data isn't changed \u2014 e.g., digital signatures.",
+        "Availability: Keep services running \u2014 e.g., cloud backups."
       ]
     },
     {
-      heading: "🔒 CIA Triad Explained",
+      heading: "AAA: Authentication, Authorization & Accounting",
       content: [
-        "**Confidentiality** 🕵️‍♀️: Prevent unauthorized access (like encrypting files).",
-        "**Integrity** 📋: Ensure data accuracy (like using checksums).",
-        "**Availability** 🧰: Keep systems accessible (like setting up backups)."
+        "Authentication: Prove your identity \u2014 e.g., password login.",
+        "Authorization: Grant access \u2014 e.g., HR only accesses salaries.",
+        "Accounting: Track activity \u2014 e.g., audit logs."
       ]
     },
     {
-      heading: "🛂 AAA Model – Your Security Gatekeepers",
+      heading: "Cyber Attacks and Threats",
       content: [
-        "**Authentication** 🔐: Who are you? (e.g. login with a password)",
-        "**Authorization** ✅: What can you do? (e.g. access to only your folders)",
-        "**Accounting** 📊: What did you do? (e.g. logs of login attempts)"
+        "Cyberattacks try to break the CIA/AAA models using system weaknesses.",
+        "Phishing, malware, and hacking are common attack types.",
+        "Threat actors include: Script Kiddies, Cybercriminals, Hacktivists, Insiders, and State-sponsored hackers."
       ]
     },
     {
-      heading: "🚨 Common Cyber Threats",
+      heading: "Types of Malware",
       content: [
-        "👾 Malware: Nasty software like viruses, worms, and ransomware.",
-        "🎣 Phishing: Fake emails or websites to steal data.",
-        "🤖 Botnets: Networks of hijacked computers.",
-        "🎭 Social Engineering: Tricking people into giving up info."
+        "Virus: Spreads via infected files (e.g., Melissa virus).",
+        "Worm: Spreads without help (e.g., Conficker worm).",
+        "Trojan: Masquerades as a useful file (e.g., Zeus).",
+        "Ransomware: Locks files and demands money.",
+        "Spyware: Steals your browsing or data.",
+        "Keylogger: Records your keyboard activity."
       ]
     },
     {
-      heading: "⚔️ Who Are the Threat Actors?",
+      heading: "Threat, Vulnerability, and Risk",
       content: [
-        "🧑‍💻 Script Kiddies: Newbies using existing tools to hack.",
-        "💰 Cybercriminals: Hackers with profit motives.",
-        "🎯 Hacktivists: Hacking for a political/social agenda.",
-        "🕵️ State-Sponsored Hackers: Government-backed cyber espionage.",
-        "🧨 Insiders: People within your company misusing access."
+        "Threat: The potential danger (e.g., a hacker).",
+        "Vulnerability: A weakness (e.g., unpatched software).",
+        "Risk: Likelihood that a threat exploits a vulnerability."
       ]
     },
     {
-      heading: "🦠 Types of Malware",
+      heading: "Cyber Hygiene Tips",
       content: [
-        "🧬 **Virus**: Attaches to clean files and spreads.",
-        "🐍 **Worm**: Self-replicating across systems.",
-        "🐴 **Trojan**: Disguised as legitimate software.",
-        "🪙 **Ransomware**: Locks files until ransom is paid.",
-        "👀 **Spyware**: Secretly monitors user behavior.",
-        "⌨️ **Keylogger**: Records every keystroke you make."
+        "Use Multi-Factor Authentication (MFA).",
+        "Keep software updated and patched.",
+        "Sandbox suspicious files.",
+        "Use Single Sign-On (SSO) for convenience.",
+        "Don't rely on Security through Obscurity alone."
       ]
     },
     {
-      heading: "⚖️ Threat vs Vulnerability vs Risk",
+      heading: "Quick Activity",
       content: [
-        "☠️ **Threat**: Anything that can cause harm (e.g. malware).",
-        "🕳️ **Vulnerability**: A weakness in the system (e.g. unpatched software).",
-        "🎲 **Risk**: The chance a threat exploits a vulnerability (e.g. losing customer data)."
+        "Visit: https://informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/",
+        "Choose a breach and answer:\n - Who was behind it?\n - What was their motive?\n - What was exploited?"
       ]
     },
     {
-      heading: "🧼 Cyber Hygiene Tips",
+      heading: "Recap",
       content: [
-        "🔐 Use Multi-Factor Authentication (MFA).",
-        "🛠️ Regular Software Patching.",
-        "🧪 Use Sandboxing to isolate suspicious files.",
-        "📲 Employ Single Sign-On (SSO) for secure access.",
-        "🕶️ Don't rely on obscurity — apply layered security!"
-      ]
-    },
-    {
-      heading: "🧠 Recap Time!",
-      content: [
-        "✅ Know your enemy: malware, phishing, threat actors.",
-        "🔑 Master the CIA & AAA models.",
-        "📉 Understand risk by learning threats & vulnerabilities.",
-        "🛡️ Be proactive with your cyber hygiene practices."
+        "Explain cybersecurity basics and career paths.",
+        "Understand CIA and AAA models.",
+        "Identify malware types and their effects.",
+        "Distinguish between threats, vulnerabilities, and risks.",
+        "Follow best practices for security hygiene."
       ]
     }
   ]

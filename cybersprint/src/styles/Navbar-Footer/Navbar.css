@@ -1,11 +1,24 @@
+/* Sticky and stylish fixed navbar */
 .navbar {
-  background-color: transparent;
-  padding: 1.25rem 1.5rem;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 50;
+  left: 0;
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  z-index: 1000;
+  background-color: rgba(15, 15, 26, 0.85); /* Transparent background */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Optional enhancement when user scrolls */
+.navbar.scrolled {
+  background-color: rgba(15, 15, 26, 0.95);
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.2);
+}
+
+/* Container for spacing and alignment */
 .navbar-container {
   max-width: 96rem;
   margin: 0 auto;
@@ -14,27 +27,44 @@
   align-items: center;
 }
 
+/* Branding / logo */
 .navbar-logo {
   font-size: 1.5rem;
   font-weight: 800;
-  color: white;
-  letter-spacing: -0.03em;
+  color: #ffffff;
   text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.03em;
 }
 
+/* Navigation links */
 .navbar-links {
   display: flex;
   gap: 2rem;
 }
 
+/* Each nav item */
 .nav-item {
-  color: #ccc;
+  color: #d1d5db;
   font-size: 0.95rem;
   font-weight: 500;
   text-decoration: none;
-  transition: color 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.25s ease;
 }
 
+/* Hover effect */
 .nav-item:hover {
   color: #a855f7;
+}
+
+/* Responsive adjustments (optional for mobile support) */
+@media (max-width: 768px) {
+  .navbar-links {
+    gap: 1.25rem;
+  }
+
+  .navbar {
+    padding: 1rem 1.25rem;
+  }
 }

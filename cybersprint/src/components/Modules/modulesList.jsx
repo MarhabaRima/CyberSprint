@@ -1,8 +1,8 @@
 // src/components/Modules/ModuleList.jsx
 
 import { Link } from "react-router-dom";
-import "../../styles/Modules/ModuleList.css";
 import "../../styles/Modules/shared.css";
+import "../../styles/Modules/ModuleList.css";
 
 const modulesList = [
   {
