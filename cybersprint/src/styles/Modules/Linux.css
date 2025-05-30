@@ -111,12 +111,24 @@
     }
   }
   
-  /* Avoid overriding navbar or global links */
-  nav,
-  .navbar,
-  .footer,
-  a {
-    all: unset;
-    display: revert;
-    color: revert;
+  .no-bullets {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .terminal-help ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .terminal-help li {
+    margin-bottom: 0.3rem;
+  }
+  
+  .terminal-help code {
+    background-color: #2a2a40;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
   }
