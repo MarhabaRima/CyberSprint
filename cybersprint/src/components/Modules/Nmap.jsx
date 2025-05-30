@@ -8,7 +8,6 @@ import '../../styles/Modules/Nmap.css';
 export default function NmapModule() {
   const [showTerminal, setShowTerminal] = useState(false);
 
-  // Define terminal commands
   const terminalCommands = {
     nmap: {
       description: 'Basic Nmap Scan',
@@ -39,14 +38,14 @@ export default function NmapModule() {
       {NmapContent.sections.map((section, index) => (
         <section key={index} className="module-section">
           <h2 className="section-heading">{section.heading}</h2>
-          <ul className="section-points">
+          <ul className="section-points no-bullets">
             {section.content.map((line, idx) =>
               line.startsWith('`') ? (
                 <li key={idx} className="terminal-block">
                   <pre><code>{line.replace(/`/g, '')}</code></pre>
                 </li>
               ) : (
-                <li key={idx} className="point-bullet">{line}</li>
+                <li key={idx} className="point-text">{line}</li>
               )
             )}
           </ul>
@@ -63,29 +62,35 @@ export default function NmapModule() {
               </button>
 
               {showTerminal && (
-                <div className="real-terminal">
-                  <Terminal
-                    promptLabel="user@cybersprint:~$"
-                    commands={terminalCommands}
-                    welcomeMessage="Welcome to the Nmap CLI Playground. Try commands like 'nmap 192.168.1.1' or 'nmap -sV 192.168.1.1"
-                    autoFocus
-                    onLoad={(terminal) => {
-                      terminal.pushToStdout(
-                        "Welcome to the Nmap CLI Playground. Try commands like 'nmap 192.168.1.1' or 'nmap -sV 192.168.1.1'"
-                      );
-                    }}
-                    style={{
-                      backgroundColor: '#000',
-                      color: '#00FF00',
-                      fontFamily: 'monospace',
-                      padding: '1rem',
-                      height: '300px',
-                      overflowY: 'auto',
-                      borderRadius: '10px',
-                      marginTop: '1rem'
-                    }}
-                  />
-                </div>
+                <>
+                  <div className="terminal-help">
+                    <strong>💡 Commands to try:</strong>
+                    <ul>
+                      <li><code>nmap 192.168.1.1</code> – Basic scan</li>
+                      <li><code>nmap -sV 192.168.1.1</code> – Service version scan</li>
+                      <li><code>nmap -O 192.168.1.1</code> – OS detection</li>
+                    </ul>
+                  </div>
+
+                  <div className="real-terminal">
+                    <Terminal
+                      promptLabel="user@cybersprint:~$"
+                      commands={terminalCommands}
+                      welcomeMessage=""
+                      autoFocus
+                      style={{
+                        backgroundColor: '#000',
+                        color: '#00FF00',
+                        fontFamily: 'monospace',
+                        padding: '1rem',
+                        height: '300px',
+                        overflowY: 'auto',
+                        borderRadius: '10px',
+                        marginTop: '1rem'
+                      }}
+                    />
+                  </div>
+                </>
               )}
             </div>
           )}
